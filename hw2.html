@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button type="button" onclick="showProduct(products)">Click me to Show Product</button>
+    <p id="demo"></p>
+    <script>
+        const products = [
+            {
+                id: "01",
+                name: "ชุดกระโปรงฟรุ้งฟริ้ง",
+                price: "฿690",
+                img: "DabaseShop/77306789_1258378944346554_7966083067473297408_n.jpg"
+            },
+            {
+                id: '02',
+                name: "=ุดกระโปรงเป็นทางการ",
+                price: "฿490",
+                img: "DabaseShop/22090036_759771314207322_5866417209795330050_n.jpg"
+            },
+            {
+                id: '03',
+                name: "ชุดกระโปรงไปทะเลสำหรับลูกน้อย",
+                price: "฿590",
+                img: "DabaseShop/22728797_768413516676435_8061253119069667676_n.jpg"
+            },
+            {
+                id: '04',
+                name: "ชุดเสื้อกันหนาวฮูกน้อย",
+                price: "฿490",
+                img: "DabaseShop/S__6643729.jpg"
+            },
+            {
+                id: '05',
+                name: "ชุดเสื้อกันหนาวสุนัขจิ้งจอกน้อย",
+                price: "฿490",
+                img: "DabaseShop/208866913_1722866221231155_2218948419904072816_n.jpg"
+            },
+            {
+                id: '06',
+                name: "ชุดนอนหมีน้อย",
+                price: "฿290",
+                img: "DabaseShop/178071795_1722866037897840_2587011408226545927_n.jpg"
+            },
+            {
+                id: '07',
+                name: "ชุดนอนมีลาย",
+                price: "฿290",
+                img: "DabaseShop/26166483_798579203659866_6152736129500748836_n.jpg"
+            },
+            {
+                id: '08',
+                name: "ขุดนอนคู่หู",
+                price: "฿390",
+                img: "DabaseShop/186018157_1722866177897826_4951117409079078374_n.jpg"
+            },
+            {
+                id: '09',
+                name: "ชุดกระโปรงสีเขียว",
+                price: "฿690",
+                img: "DabaseShop/21192088_747478055436648_930604311901717996_n.jpg"
+            },
+            {
+                id: '10',
+                name: "ชุดไปเที่ยวสีน้ำตาล",
+                price: "฿690",
+                img: "DabaseShop/21149890_747478308769956_4705195050514972950_n.jpg"
+            },
+        ]
+        let text = "<ul>";
+        let x = document.getElementById("demo")
+        products.forEach(showProduct);
+        text += "</ul>";
+        x.innerHTML = text;
+
+        function showProduct(value) {
+            text += `<li>ID: ${value.id}
+                <br>Name: ${value.name}
+                <br>Price: ${value.price}
+                <br><img src = ${value.img} width="200px" height="200px"></li>`
+                
+            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+    </script>
+</body>
+</html>
